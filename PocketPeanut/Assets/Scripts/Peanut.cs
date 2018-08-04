@@ -1,8 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Peanut : MonoBehaviour {
+
+	public Image speechBubble;
+	public Text speechText;
 
 	int Social = 100;
 	int Comfort = 100;
@@ -34,6 +38,8 @@ public class Peanut : MonoBehaviour {
 
 	void AssessMood () {
 		float currentMood = (100 / 300 * (Social + Comfort + Health)) / 100f;
+		Debug.Log ("Mood: " + currentMood);
+
 	}
 
 	void PassTime (int MinutesElapsed) {
